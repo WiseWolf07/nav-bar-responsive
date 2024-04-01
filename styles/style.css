@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    background-color: rgb(22, 7, 36);
+}
+
+nav{
+    width: 100%;
+    height: auto;
+    padding: 13px 0 13px 20px;
+    background-color: rgb(22, 7, 36);
+}
+
+.flex-container{
+    display: flex;
+}
+
+#tittle-icon{
+    width: 100%;
+    justify-content: space-between;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#tittle-icon img{
+    display: none;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+#tags{
+    height: 100%;
+    padding: 10px;
+}
+
+ul{
+    height: 100%;
+}
+
+#tag{
+    height: 100%;
+}
+
+#tag a{
+    text-decoration: none;
+    height: 100%;
+    padding: 10px 10px;
+    transition: background-color 0.5s ease-in, color 0.5s ease-in, opacity 0.5s ease-in;
+    text-wrap: nowrap;
+}
+
+#tag li{
+    list-style: none;
+    margin-right: 25px;
+    height: 100%;
+}
+
+#tag a:hover{
+    background-color: #fff;
+    border-radius: 7px;
+    color: rgb(22, 7, 36);
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    #tittle-icon img{
+        cursor: pointer;
+        display: block;
+        width: 20px;
+        height: auto;
+        pointer-events: auto;
+        margin-right: 20px;
+        z-index: 2;
+    }
+
+    #tittle-icon h1{
+        margin-left: 20px;
+    }
+
+
+    #tittle-icon {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav{
+        flex-direction: column;
+        padding-left: 0px;
+        z-index: -1;
+    }
+
+    #title-icon{
+        width: 100%;
+    }
+
+    #tag{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0px;
+    }
+
+    #tag li{
+        margin: 0 0 60px 0;
+        height: auto;
+    }
+
+    #tags{
+        padding: 25px 0 0 0;
+        position: absolute;
+        top: 60px;
+        background-color: rgb(22, 7, 36);
+        width: 100%;
+        right: -50000px;
+        transition: right 0.5s ease;
+    }
+
+    #menu-toggle:checked ~ #tags{
+        right: 0px;
+    }
+
+}
