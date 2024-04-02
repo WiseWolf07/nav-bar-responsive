@@ -7,6 +7,10 @@
     color: #fff;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 header{
     width: 100%;
     height: auto;
